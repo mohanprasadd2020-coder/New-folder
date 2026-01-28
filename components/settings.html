@@ -1212,6 +1212,34 @@
         </div>
       </div>
 
+      <!-- Chatbot Widget -->
+      <div class="chatbot-widget">
+        <div class="chatbot-box" id="chatbotBox">
+          <div class="chatbot-header">
+            <div style="display: flex; align-items: center; gap: 10px">
+              <span style="font-size: 20px">🤖</span>
+              <div class="chatbot-title">Edu AI Assistant</div>
+            </div>
+            <button class="chatbot-close" onclick="toggleChatbot()">✕</button>
+          </div>
+          <div class="chatbot-messages" id="chatbotMessages">
+            <div class="message bot">
+              <div>
+                Hi! 👋 I'm your AI learning assistant. How can I help you today?
+              </div>
+            </div>
+          </div>
+          <div class="chatbot-input-area">
+            <input type="text" id="chatbotInput" placeholder="Ask me anything..."
+              onkeypress="handleChatMessage(event)" />
+            <button class="chatbot-send" onclick="sendChatMessage()">Send</button>
+          </div>
+        </div>
+        <button class="chatbot-toggle" id="chatbotToggle" onclick="toggleChatbot()">
+          💬
+        </button>
+      </div>
+
       <script>
         // ===== GLOBAL VARIABLES =====
         let currentUser = null;
