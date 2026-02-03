@@ -1286,54 +1286,8 @@
           <div class="stat-badge">
             🔥 <span id="streak">23</span> Day Streak
           </div>
-          <!-- <div
-              class="user-avatar"
-              id="userAvatarBtn"
-              onclick="toggleProfileDropdown()"
-            >
-              👤
-            </div> -->
-          <!-- Profile Dropdown -->
-          <!-- <div
-              class="user-profile-dropdown"
-              id="userProfileDropdown"
-              aria-hidden="true"
-            >
-              <div class="profile-header">
-                <div class="profile-avatar-large">👤</div>
-                <div class="profile-info">
-                  <h3 id="profileName">Student</h3>
-                  <p id="profileEmail">student@edumorph.com</p>
-                </div>
-              </div>
 
-              <div class="profile-details">
-                <div class="detail-item">
-                  <label>User ID</label>
-                  <span id="profileId">EDU-2026-001</span>
-                </div>
-                <div class="detail-item">
-                  <label>Member Since</label>
-                  <span id="profileJoined">January 2026</span>
-                </div>
-                <div class="detail-item">
-                  <label>Learning Points</label>
-                  <span id="profilePoints">2,450 XP</span>
-                </div>
-                <div class="detail-item">
-                  <label>Generated</label>
-                  <span id="profileCourses">5</span>
-                </div>
-                <div class="detail-item">
-                   App language moved to Settings 
-                </div>
-              </div>
 
-              <div class="profile-actions">
-                <button onclick="showSection('settings')">View Profile</button>
-                <button onclick="logout()">Sign Out</button>
-              </div>
-            </div> -->
         </div>
       </div>
 
@@ -1348,20 +1302,20 @@
           <div class="slider-track" id="sliderTrack">
             <!-- Slider items will be injected here if dynamic, otherwise static -->
             <div class="slider-card"><img
-                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80"
-                alt="Landscape"></div>
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZKZ8jhQAh8-KmdbPJmf1q-lqm0ybTYUXIzQ&s"
+                alt="Animation "></div>
             <div class="slider-card"><img
-                src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=500&q=80"
-                alt="Nature"></div>
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Xi2MXw04xP-_6FmZzn0qfdjDus9se8TKp5iD36ld&s"
+                alt="Flow chart"></div>
             <div class="slider-card active"><img
-                src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=500&q=80"
-                alt="Mountain"></div>
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4a4rsnesiNTj5HvAY3loSNP1HjOjPvlLYGg&s"
+                alt="Image"></div>
             <div class="slider-card"><img
                 src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=500&q=80"
-                alt="Forest"></div>
+                alt="Video"></div>
             <div class="slider-card"><img
-                src="https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=500&q=80"
-                alt="Lake"></div>
+                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=500&q=80"
+                alt="Audio"></div>
           </div>
         </div>
 
@@ -1371,9 +1325,9 @@
         </div>
       </div>
 
-        <div id="componentContainer"></div>
-      </div>
+      <div id="componentContainer"></div>
     </div>
+  </div>
 
 
   </div>
@@ -1381,43 +1335,6 @@
   </div>
 
   <!-- home content is loaded dynamically into #componentContainer; removed duplicate static home block -->
-
-
-  <!-- Chatbot Widget -->
-  <!-- <div class="chatbot-widget">
-      <div class="chatbot-box" id="chatbotBox">
-        <div class="chatbot-header">
-          <div style="display: flex; align-items: center; gap: 10px">
-            <span style="font-size: 20px">🤖</span>
-            <div class="chatbot-title">Edu AI Assistant</div>
-          </div>
-          <button class="chatbot-close" onclick="toggleChatbot()">✕</button>
-        </div>
-        <div class="chatbot-messages" id="chatbotMessages">
-          <div class="message bot">
-            <div>
-              Hi! 👋 I'm your AI learning assistant. How can I help you today?
-            </div>
-          </div>
-        </div>
-        <div class="chatbot-input-area">
-          <input
-            type="text"
-            id="chatbotInput"
-            placeholder="Ask me anything..."
-            onkeypress="handleChatMessage(event)"
-          />
-          <button class="chatbot-send" onclick="sendChatMessage()">Send</button>
-        </div>
-      </div>
-      <button
-        class="chatbot-toggle"
-        id="chatbotToggle"
-        onclick="toggleChatbot()"
-      >
-        💬
-      </button>
-    </div> -->
 
   <script>
     // ===== GLOBAL VARIABLES =====
@@ -1469,553 +1386,247 @@
       }
     }
 
-    // // ===== FILE UPLOAD & MANAGEMENT =====
-    // // ===== DYNAMIC COMPONENT LOADER =====
-    // function loadComponent(name, event) {
-    //   // map logical names to files
-    //   const fileMap = {
-    //     home: ["home1.html", "home.html"],
-    //     library: ["library.html"],
-    //     settings: ["settings.html"],
-    //     "user-profile": ["user-profile.html"],
-    //   };
 
-    //   // toggle active link in sidebar
-    //   if (event && event.target) {
-    //     document.querySelectorAll('.sidebar-menu a').forEach(a => a.classList.remove('active'));
-    //     event.target.classList.add('active');
-    //   }
+    // ===== USER PROFILE FUNCTIONS =====
+    function updateStreak() {
+      const streakEl = document.getElementById("streak");
+      if (streakEl) streakEl.textContent = Math.floor(Math.random() * 30) + 1;
+    }
 
-    //   const container = document.getElementById('componentContainer');
-    //   if (!container) return;
+    function updateUserProfile() {
+      const userNameEl = document.getElementById("userName");
+      if (!userNameEl) return;
+      const userName = userNameEl.textContent;
+      const userEmail = userName.toLowerCase() + "@edumorph.com";
 
-    //   const candidates = fileMap[name] || [];
-    //   if (candidates.length === 0) {
-    //     container.innerHTML = `<div style="color:#faa">Component '${name}' not found.</div>`;
-    //     return;
-    //   }
+      const profileId =
+        "EDU-2026-" +
+        String(Math.floor(Math.random() * 1000)).padStart(3, "0");
+      const profilePoints = Math.floor(Math.random() * 5000) + 1000 + " XP";
+      const profileCourses = Math.floor(Math.random() * 10) + 1;
 
-    //   // try each candidate file until one loads
-    //   (async function tryFiles() {
-    //     for (const f of candidates) {
-    //       try {
-    //         const resp = await fetch(f, { cache: 'no-store' });
-    //         if (!resp.ok) throw new Error('fetch failed');
-    //         const text = await resp.text();
+      // Update sidebar profile
+      const sidebarUserName = document.getElementById("sidebarUserName");
+      const sidebarProfileId = document.getElementById("sidebarProfileId");
+      const sidebarProfileJoined = document.getElementById(
+        "sidebarProfileJoined",
+      );
+      const sidebarProfilePoints = document.getElementById(
+        "sidebarProfilePoints",
+      );
+      const sidebarProfileCourses = document.getElementById(
+        "sidebarProfileCourses",
+      );
 
-    //         // parse and extract the fragment with expected id
-    //         const parser = new DOMParser();
-    //         const doc = parser.parseFromString(text, 'text/html');
-    //         const idMap = { home: 'homeSection', library: 'librarySection', settings: 'settingsSection', 'user-profile': 'userProfileSection' };
-    //         const targetId = idMap[name];
-    //         let fragment = null;
-    //         if (targetId) fragment = doc.getElementById(targetId);
-    //         // fallback: use body
-    //         const html = fragment ? fragment.innerHTML : doc.body.innerHTML;
+      if (sidebarUserName) sidebarUserName.textContent = userName;
+      if (sidebarProfileId) sidebarProfileId.textContent = profileId;
+      if (sidebarProfileJoined)
+        sidebarProfileJoined.textContent = "January 2026";
+      if (sidebarProfilePoints)
+        sidebarProfilePoints.textContent = profilePoints;
+      if (sidebarProfileCourses)
+        sidebarProfileCourses.textContent = profileCourses;
 
-    //         container.innerHTML = html;
+      // Also update profile dropdown if it exists
+      const profileName = document.getElementById("profileName");
+      const profileEmail = document.getElementById("profileEmail");
+      const profileIdDropdown = document.getElementById("profileId");
+      const profileJoinedDropdown = document.getElementById("profileJoined");
+      const profilePointsDropdown = document.getElementById("profilePoints");
+      const profileCoursesDropdown =
+        document.getElementById("profileCourses");
 
-    //         // execute any inline scripts from the fetched document
-    //         const scripts = doc.querySelectorAll('script');
-    //         scripts.forEach((s) => {
-    //           const ns = document.createElement('script');
-    //           if (s.src) ns.src = s.src;
-    //           ns.async = false;
-    //           ns.textContent = s.textContent || s.innerText || '';
-    //           document.body.appendChild(ns);
-    //         });
+      if (profileName) profileName.textContent = userName;
+      if (profileEmail) profileEmail.textContent = userEmail;
+      if (profileIdDropdown) profileIdDropdown.textContent = profileId;
+      if (profileJoinedDropdown)
+        profileJoinedDropdown.textContent = "January 2026";
+      if (profilePointsDropdown)
+        profilePointsDropdown.textContent = profilePoints;
+      if (profileCoursesDropdown)
+        profileCoursesDropdown.textContent = profileCourses;
 
-    //         // call setup function if present
-    //         if (typeof displayUploadedFiles === 'function') displayUploadedFiles();
+      // Populate profile page fields (full page view)
+      const pName = document.getElementById("profilePageName");
+      const pRole = document.getElementById("profilePageRole");
+      const pId = document.getElementById("profilePageId");
+      const pJoined = document.getElementById("profilePageJoined");
+      const pPoints = document.getElementById("profilePagePoints");
+      const pCourses = document.getElementById("profilePageCourses");
+      const pLang = document.getElementById("profilePagePreferredLanguage");
+      const pLib = document.getElementById("profilePageLibraryList");
 
-    //         // ensure top of component is visible under topbar
-    //         window.scrollTo({ top: 0, behavior: 'smooth' });
-    //         return;
-    //       } catch (err) {
-    //         // try next candidate
-    //         console.warn('Failed to load', f, err);
-    //       }
-    //     }
-    //     container.innerHTML = `<div style="color:#faa">Failed to load component '${name}'.</div>`;
-    //   })();
+      if (pName) pName.textContent = userName;
+      if (pRole) pRole.textContent = "Learner";
+      if (pId) pId.textContent = profileId;
+      if (pJoined) pJoined.textContent = "January 2026";
+      if (pPoints) pPoints.textContent = profilePoints;
+      if (pCourses) pCourses.textContent = profileCourses;
+      if (pLang)
+        pLang.textContent =
+          { en: "English", es: "Spanish", ta: "Tamil", hi: "Hindi" }[
+          selectedLanguage
+          ] ||
+          selectedLanguage ||
+          "English";
 
-    //   // on mobile, close sidebar
-    //   if (window.innerWidth <= 768) {
-    //     const sb = document.getElementById('sidebar');
-    //     if (sb) sb.classList.remove('active');
-    //   }
-    // }
+      if (pLib) {
+        pLib.innerHTML = "";
+        if (!uploadedFiles || uploadedFiles.length === 0) {
+          const none = document.createElement("div");
+          none.style.color = "#777";
+          none.textContent = "No recent items";
+          pLib.appendChild(none);
+        } else {
+          const recent = uploadedFiles.slice(-10).reverse();
+          recent.forEach((f) => {
+            const row = document.createElement("div");
+            row.style.display = "flex";
+            row.style.justifyContent = "space-between";
+            row.style.alignItems = "center";
+            row.style.gap = "8px";
+            row.style.padding = "8px";
+            row.style.borderRadius = "8px";
+            row.style.background = "rgba(20,50,100,0.35)";
+            const name = document.createElement("div");
+            name.style.color = "#fff";
+            name.style.fontSize = "14px";
+            name.style.fontWeight = "600";
+            name.textContent = f.name;
+            const meta = document.createElement("div");
+            meta.style.color = "#999";
+            meta.style.fontSize = "12px";
+            meta.textContent = `${f.size} MB`;
+            row.appendChild(name);
+            row.appendChild(meta);
+            pLib.appendChild(row);
+          });
+        }
+      }
 
-    // function handleFileUpload(event) {
-    //   const file = event.target.files[0];
-    //   if (file) {
-    //     const fileData = {
-    //       name: file.name,
-    //       size: (file.size / 1024 / 1024).toFixed(2),
-    //       type: file.type,
-    //       date: new Date().toLocaleDateString(),
-    //       time: new Date().toLocaleTimeString(),
-    //     };
-    //     uploadedFiles.push(fileData);
+      // Populate quick settings
+      const profilePreferredLanguage = document.getElementById(
+        "profilePreferredLanguage",
+      );
+      if (profilePreferredLanguage) {
+        // map common codes to readable names if needed
+        const langMap = {
+          en: "English",
+          es: "Spanish",
+          ta: "Tamil",
+          hi: "Hindi",
+        };
+        profilePreferredLanguage.textContent =
+          langMap[selectedLanguage] || selectedLanguage || "English";
+      }
 
-    //     const fileName = document.getElementById("uploadedFileName");
-    //     if (fileName) fileName.textContent = file.name;
+      // Populate recent library items inside profile (uses uploadedFiles global)
+      const libList = document.getElementById("profileLibraryList");
+      if (libList) {
+        libList.innerHTML = "";
+        if (!uploadedFiles || uploadedFiles.length === 0) {
+          const none = document.createElement("div");
+          none.style.color = "#777";
+          none.textContent = "No recent items";
+          libList.appendChild(none);
+        } else {
+          // show up to 5 recent items
+          const recent = uploadedFiles.slice(-5).reverse();
+          recent.forEach((f) => {
+            const row = document.createElement("div");
+            row.style.display = "flex";
+            row.style.justifyContent = "space-between";
+            row.style.alignItems = "center";
+            row.style.gap = "8px";
+            const name = document.createElement("div");
+            name.style.color = "#fff";
+            name.style.fontSize = "13px";
+            name.style.fontWeight = "600";
+            name.textContent = f.name;
+            const meta = document.createElement("div");
+            meta.style.color = "#999";
+            meta.style.fontSize = "12px";
+            meta.textContent = `${f.size} MB`;
+            row.appendChild(name);
+            row.appendChild(meta);
+            libList.appendChild(row);
+          });
+        }
+      }
+    }
 
-    //     const generateSection = document.getElementById("generateSection");
-    //     if (generateSection) generateSection.style.display = "block";
+    // Toggle profile dropdown visibility
+    function toggleProfileDropdown() {
+      const dropdown = document.getElementById("userProfileDropdown");
+      if (!dropdown) return;
+      dropdown.classList.toggle("active");
+    }
 
-    //     displayUploadedFiles();
-    //     event.target.value = "";
-    //   }
-    // }
+    // Set application language, update UI and persist preference
+    function setAppLanguage(lang) {
+      selectedLanguage = lang;
+      const langMap = {
+        en: "English",
+        es: "Spanish",
+        ta: "Tamil",
+        hi: "Hindi",
+      };
+      const human = langMap[lang] || lang;
 
-    // function displayUploadedFiles() {
-    //   const filesList = document.getElementById("uploadedFilesList");
-    //   const section = document.getElementById("uploadedFilesSection");
+      const spanSmall = document.getElementById("profilePreferredLanguage");
+      const spanPage = document.getElementById(
+        "profilePagePreferredLanguage",
+      );
+      if (spanSmall) spanSmall.textContent = human;
+      if (spanPage) spanPage.textContent = human;
 
-    //   if (!filesList || !section) return;
+      const selSmall = document.getElementById(
+        "profilePreferredLanguageSelect",
+      );
+      const selPage = document.getElementById(
+        "profilePagePreferredLanguageSelect",
+      );
+      const selSettings = document.getElementById("settingsLanguageSelect");
+      if (selSmall) selSmall.value = lang;
+      if (selPage) selPage.value = lang;
+      if (selSettings) selSettings.value = lang;
 
-    //   filesList.innerHTML = "";
+      try {
+        localStorage.setItem("edumorph_lang", lang);
+      } catch (e) {
+        // ignore
+      }
+    }
 
-    //   uploadedFiles.forEach((file, index) => {
-    //     const fileCard = document.createElement("div");
-    //     fileCard.style.cssText = `
-    //         padding: 20px;
-    //         background: rgba(255, 255, 255, 0.06);
-    //         border: 1px solid rgba(99, 102, 241, 0.3);
-    //         border-radius: 12px;
-    //         display: flex;
-    //         justify-content: space-between;
-    //         align-items: center;
-    //         transition: all 0.3s ease;
-    //       `;
+    function logout() {
+      window.location.href = "";
+    }
 
-    //     fileCard.innerHTML = `
-    //         <div style="flex: 1;">
-    //           <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
-    //             <span style="font-size: 28px;">📄</span>
-    //             <div>
-    //               <h4 style="color: #fff; margin: 0; font-weight: 600;">${file.name}</h4>
-    //               <p style="color: #999; margin: 5px 0 0 0; font-size: 13px;">
-    //                 ${file.size} MB • ${file.date} ${file.time}
-    //               </p>
-    //             </div>
-    //           </div>
-    //           <div style="padding-left: 40px; color: #999; font-size: 12px;">
-    //             Type: ${file.type || "File"}
-    //           </div>
-    //         </div>
-    //         <button onclick="removeFile(${index})" style="background: rgba(255, 107, 107, 0.2); border: 1px solid rgba(255, 107, 107, 0.5); color: #ff6b6b; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 107, 107, 0.4)'" onmouseout="this.style.background='rgba(255, 107, 107, 0.2)'">
-    //           🗑️ Remove
-    //         </button>
-    //       `;
-    //     filesList.appendChild(fileCard);
-    //   });
-
-    //   section.style.display = uploadedFiles.length > 0 ? "block" : "none";
-    // }
-
-    // function removeFile(index) {
-    //   uploadedFiles.splice(index, 1);
-    //   if (uploadedFiles.length === 0) {
-    //     const generateSection = document.getElementById("generateSection");
-    //     const uploadedSection = document.getElementById(
-    //       "uploadedFilesSection",
-    //     );
-    //     if (generateSection) generateSection.style.display = "none";
-    //     if (uploadedSection) uploadedSection.style.display = "none";
-    //   } else {
-    //     displayUploadedFiles();
-    //   }
-    // }
-
-    // function showFilesModal() {
-    //   const modal = document.getElementById("filesModal");
-    //   const listContainer = document.getElementById("filesModalList");
-    //   if (!modal || !listContainer) return;
-
-    //   listContainer.innerHTML = "";
-
-    //   if (uploadedFiles.length === 0) {
-    //     listContainer.innerHTML = `<div style="text-align: center; padding: 40px 20px; color: #999;"><div style="font-size: 48px; margin-bottom: 15px;">📭</div><p style="font-size: 16px;">No files uploaded yet</p></div>`;
-    //   } else {
-    //     uploadedFiles.forEach((file, index) => {
-    //       const fileItem = document.createElement("div");
-    //       fileItem.className = "files-modal-item";
-    //       fileItem.innerHTML = `
-    //           <div class="file-details">
-    //             <div class="file-name">📄 ${file.name}</div>
-    //             <div class="file-meta">
-    //               <div>Size: ${file.size} MB</div>
-    //               <div>Uploaded: ${file.date} ${file.time}</div>
-    //               <div style="color: #6366f1; margin-top: 5px;">Type: ${file.type || "File"}</div>
-    //             </div>
-    //           </div>
-    //           <button onclick="removeFileFromModal(${index})" style="background: rgba(255, 107, 107, 0.2); border: 1px solid rgba(255, 107, 107, 0.5); color: #ff6b6b; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: 600; white-space: nowrap; margin-left: 15px;" onmouseover="this.style.background='rgba(255, 107, 107, 0.4)'" onmouseout="this.style.background='rgba(255, 107, 107, 0.2)'">🗑️ Remove</button>
-    //         `;
-    //       listContainer.appendChild(fileItem);
-    //     });
-    //   }
-    //   modal.classList.add("active");
-    // }
-
-    // function closeFilesModal() {
-    //   const modal = document.getElementById("filesModal");
-    //   if (modal) modal.classList.remove("active");
-    // }
-
-    // function removeFileFromModal(index) {
-    //   removeFile(index);
-    //   showFilesModal();
-    // }
-
-    // function generateContent() {
-    //   if (uploadedFiles.length > 0) {
-    //     const fileName = uploadedFiles[uploadedFiles.length - 1].name;
-    //     alert(
-    //       `✨ Generating content from "${fileName}"...\n\nThis may take a few moments!`,
-    //     );
-    //     setTimeout(() => {
-    //       alert(
-    //         `✓ Content generated successfully!\n\nYour materials are ready.`,
-    //       );
-    //     }, 2000);
-    //   }
-    // }
-
-    // // ===== CHAT FUNCTIONS =====
-    // function toggleChatbot() {
-    //   const chatbotBox = document.getElementById("chatbotBox");
-    //   const chatbotToggle = document.getElementById("chatbotToggle");
-    //   if (chatbotBox && chatbotToggle) {
-    //     chatbotBox.classList.toggle("active");
-    //     chatbotToggle.style.display = chatbotBox.classList.contains("active")
-    //       ? "none"
-    //       : "flex";
-    //   }
-    // }
-
-    // function sendChatMessage() {
-    //   const input = document.getElementById("chatbotInput");
-    //   if (!input) return;
-    //   const message = input.value.trim();
-    //   if (message) {
-    //     addChatMessage(message, "user");
-    //     input.value = "";
-    //     setTimeout(() => {
-    //       const responses = [
-    //         "That's a great question! 🤔",
-    //         "I can explain this better.",
-    //         "Would you like more help?",
-    //         "Great progress! 🌟",
-    //       ];
-    //       addChatMessage(
-    //         responses[Math.floor(Math.random() * responses.length)],
-    //         "bot",
-    //       );
-    //     }, 800);
-    //   }
-    // }
-
-    // function handleChatMessage(event) {
-    //   if (event.key === "Enter") sendChatMessage();
-    // }
-
-    // function addChatMessage(text, sender) {
-    //   const messagesContainer = document.getElementById("chatbotMessages");
-    //   if (!messagesContainer) return;
-    //   const messageDiv = document.createElement("div");
-    //   messageDiv.className = `message ${sender}`;
-    //   messageDiv.textContent = text;
-    //   messagesContainer.appendChild(messageDiv);
-    //   messagesContainer.scrollTop = messagesContainer.scrollHeight;
-    // }
-
-    // // ===== USER PROFILE FUNCTIONS =====
-    // function updateStreak() {
-    //   const streakEl = document.getElementById("streak");
-    //   if (streakEl) streakEl.textContent = Math.floor(Math.random() * 30) + 1;
-    // }
-
-    // function updateUserProfile() {
-    //   const userNameEl = document.getElementById("userName");
-    //   if (!userNameEl) return;
-    //   const userName = userNameEl.textContent;
-    //   const userEmail = userName.toLowerCase() + "@edumorph.com";
-
-    //   const profileId =
-    //     "EDU-2026-" +
-    //     String(Math.floor(Math.random() * 1000)).padStart(3, "0");
-    //   const profilePoints = Math.floor(Math.random() * 5000) + 1000 + " XP";
-    //   const profileCourses = Math.floor(Math.random() * 10) + 1;
-
-    //   // Update sidebar profile
-    //   const sidebarUserName = document.getElementById("sidebarUserName");
-    //   const sidebarProfileId = document.getElementById("sidebarProfileId");
-    //   const sidebarProfileJoined = document.getElementById(
-    //     "sidebarProfileJoined",
-    //   );
-    //   const sidebarProfilePoints = document.getElementById(
-    //     "sidebarProfilePoints",
-    //   );
-    //   const sidebarProfileCourses = document.getElementById(
-    //     "sidebarProfileCourses",
-    //   );
-
-    //   if (sidebarUserName) sidebarUserName.textContent = userName;
-    //   if (sidebarProfileId) sidebarProfileId.textContent = profileId;
-    //   if (sidebarProfileJoined)
-    //     sidebarProfileJoined.textContent = "January 2026";
-    //   if (sidebarProfilePoints)
-    //     sidebarProfilePoints.textContent = profilePoints;
-    //   if (sidebarProfileCourses)
-    //     sidebarProfileCourses.textContent = profileCourses;
-
-    //   // Also update profile dropdown if it exists
-    //   const profileName = document.getElementById("profileName");
-    //   const profileEmail = document.getElementById("profileEmail");
-    //   const profileIdDropdown = document.getElementById("profileId");
-    //   const profileJoinedDropdown = document.getElementById("profileJoined");
-    //   const profilePointsDropdown = document.getElementById("profilePoints");
-    //   const profileCoursesDropdown =
-    //     document.getElementById("profileCourses");
-
-    //   if (profileName) profileName.textContent = userName;
-    //   if (profileEmail) profileEmail.textContent = userEmail;
-    //   if (profileIdDropdown) profileIdDropdown.textContent = profileId;
-    //   if (profileJoinedDropdown)
-    //     profileJoinedDropdown.textContent = "January 2026";
-    //   if (profilePointsDropdown)
-    //     profilePointsDropdown.textContent = profilePoints;
-    //   if (profileCoursesDropdown)
-    //     profileCoursesDropdown.textContent = profileCourses;
-
-    //   // Populate profile page fields (full page view)
-    //   const pName = document.getElementById("profilePageName");
-    //   const pRole = document.getElementById("profilePageRole");
-    //   const pId = document.getElementById("profilePageId");
-    //   const pJoined = document.getElementById("profilePageJoined");
-    //   const pPoints = document.getElementById("profilePagePoints");
-    //   const pCourses = document.getElementById("profilePageCourses");
-    //   const pLang = document.getElementById("profilePagePreferredLanguage");
-    //   const pLib = document.getElementById("profilePageLibraryList");
-
-    //   if (pName) pName.textContent = userName;
-    //   if (pRole) pRole.textContent = "Learner";
-    //   if (pId) pId.textContent = profileId;
-    //   if (pJoined) pJoined.textContent = "January 2026";
-    //   if (pPoints) pPoints.textContent = profilePoints;
-    //   if (pCourses) pCourses.textContent = profileCourses;
-    //   if (pLang)
-    //     pLang.textContent =
-    //       { en: "English", es: "Spanish", ta: "Tamil", hi: "Hindi" }[
-    //       selectedLanguage
-    //       ] ||
-    //       selectedLanguage ||
-    //       "English";
-
-    //   if (pLib) {
-    //     pLib.innerHTML = "";
-    //     if (!uploadedFiles || uploadedFiles.length === 0) {
-    //       const none = document.createElement("div");
-    //       none.style.color = "#777";
-    //       none.textContent = "No recent items";
-    //       pLib.appendChild(none);
-    //     } else {
-    //       const recent = uploadedFiles.slice(-10).reverse();
-    //       recent.forEach((f) => {
-    //         const row = document.createElement("div");
-    //         row.style.display = "flex";
-    //         row.style.justifyContent = "space-between";
-    //         row.style.alignItems = "center";
-    //         row.style.gap = "8px";
-    //         row.style.padding = "8px";
-    //         row.style.borderRadius = "8px";
-    //         row.style.background = "rgba(20,50,100,0.35)";
-    //         const name = document.createElement("div");
-    //         name.style.color = "#fff";
-    //         name.style.fontSize = "14px";
-    //         name.style.fontWeight = "600";
-    //         name.textContent = f.name;
-    //         const meta = document.createElement("div");
-    //         meta.style.color = "#999";
-    //         meta.style.fontSize = "12px";
-    //         meta.textContent = `${f.size} MB`;
-    //         row.appendChild(name);
-    //         row.appendChild(meta);
-    //         pLib.appendChild(row);
-    //       });
-    //     }
-    //   }
-
-    //   // Populate quick settings
-    //   const profilePreferredLanguage = document.getElementById(
-    //     "profilePreferredLanguage",
-    //   );
-    //   if (profilePreferredLanguage) {
-    //     // map common codes to readable names if needed
-    //     const langMap = {
-    //       en: "English",
-    //       es: "Spanish",
-    //       ta: "Tamil",
-    //       hi: "Hindi",
-    //     };
-    //     profilePreferredLanguage.textContent =
-    //       langMap[selectedLanguage] || selectedLanguage || "English";
-    //   }
-
-    //   // Populate recent library items inside profile (uses uploadedFiles global)
-    //   const libList = document.getElementById("profileLibraryList");
-    //   if (libList) {
-    //     libList.innerHTML = "";
-    //     if (!uploadedFiles || uploadedFiles.length === 0) {
-    //       const none = document.createElement("div");
-    //       none.style.color = "#777";
-    //       none.textContent = "No recent items";
-    //       libList.appendChild(none);
-    //     } else {
-    //       // show up to 5 recent items
-    //       const recent = uploadedFiles.slice(-5).reverse();
-    //       recent.forEach((f) => {
-    //         const row = document.createElement("div");
-    //         row.style.display = "flex";
-    //         row.style.justifyContent = "space-between";
-    //         row.style.alignItems = "center";
-    //         row.style.gap = "8px";
-    //         const name = document.createElement("div");
-    //         name.style.color = "#fff";
-    //         name.style.fontSize = "13px";
-    //         name.style.fontWeight = "600";
-    //         name.textContent = f.name;
-    //         const meta = document.createElement("div");
-    //         meta.style.color = "#999";
-    //         meta.style.fontSize = "12px";
-    //         meta.textContent = `${f.size} MB`;
-    //         row.appendChild(name);
-    //         row.appendChild(meta);
-    //         libList.appendChild(row);
-    //       });
-    //     }
-    //   }
-    // }
-
-    // // Toggle profile dropdown visibility
-    // function toggleProfileDropdown() {
-    //   const dropdown = document.getElementById("userProfileDropdown");
-    //   if (!dropdown) return;
-    //   dropdown.classList.toggle("active");
-    // }
-
-    // // Set application language, update UI and persist preference
-    // function setAppLanguage(lang) {
-    //   selectedLanguage = lang;
-    //   const langMap = {
-    //     en: "English",
-    //     es: "Spanish",
-    //     ta: "Tamil",
-    //     hi: "Hindi",
-    //   };
-    //   const human = langMap[lang] || lang;
-
-    //   const spanSmall = document.getElementById("profilePreferredLanguage");
-    //   const spanPage = document.getElementById(
-    //     "profilePagePreferredLanguage",
-    //   );
-    //   if (spanSmall) spanSmall.textContent = human;
-    //   if (spanPage) spanPage.textContent = human;
-
-    //   const selSmall = document.getElementById(
-    //     "profilePreferredLanguageSelect",
-    //   );
-    //   const selPage = document.getElementById(
-    //     "profilePagePreferredLanguageSelect",
-    //   );
-    //   const selSettings = document.getElementById("settingsLanguageSelect");
-    //   if (selSmall) selSmall.value = lang;
-    //   if (selPage) selPage.value = lang;
-    //   if (selSettings) selSettings.value = lang;
-
-    //   try {
-    //     localStorage.setItem("edumorph_lang", lang);
-    //   } catch (e) {
-    //     // ignore
-    //   }
-    // }
-
-    // function logout() {
-    //   window.location.href = "";
-    // }
-
-    // // ===== EVENT LISTENERS =====
-    // document.addEventListener("click", function (event) {
-    //   // Close files modal when clicking outside
-    //   const filesModal = document.getElementById("filesModal");
-    //   const filesContent = document.querySelector(".files-modal-content");
-    //   if (
-    //     filesModal &&
-    //     filesContent &&
-    //     filesModal.classList.contains("active") &&
-    //     !filesContent.contains(event.target)
-    //   ) {
-    //     closeFilesModal();
-    //   }
-
-    //   // Close profile dropdown when clicking outside avatar/dropdown
-    //   const profileDropdown = document.getElementById("userProfileDropdown");
-    //   const avatarBtn = document.getElementById("userAvatarBtn");
-    //   if (profileDropdown && profileDropdown.classList.contains("active")) {
-    //     const insideDropdown = profileDropdown.contains(event.target);
-    //     const clickedAvatar = avatarBtn && avatarBtn.contains(event.target);
-    //     if (!insideDropdown && !clickedAvatar) {
-    //       profileDropdown.classList.remove("active");
-    //     }
-    //   }
-    // });
-
-    // // ===== INITIALIZATION =====
-    // window.addEventListener("load", () => {
-    //   updateStreak();
-    //   // load initial component
-    //   try {
-    //     loadComponent("home");
-    //   } catch (e) {
-    //     console.warn(e);
-    //   }
-    //   const userNameEl = document.getElementById("userName");
-    //   if (userNameEl) userNameEl.textContent = "Student";
-    //   // load preferred language from localStorage if available
-    //   try {
-    //     const stored = localStorage.getItem("edumorph_lang");
-    //     if (stored) selectedLanguage = stored;
-    //   } catch (e) {
-    //     // ignore
-    //   }
-
-    //   updateUserProfile();
-    //   // ensure selects and displays are synced
-    //   setAppLanguage(selectedLanguage || "en");
-
-    //   // Initialize Slider
-    //   initSlider();
-    // });
 
     // ===== SLIDER FUNCTIONS =====
     let currentSlide = 2; // Start with the middle item (index 2)
     let autoSlideInterval;
 
     function initSlider() {
-      updateSliderClasses();
-      startAutoSlide();
+      // Force initial position and classes
+      moveSlider(0);
+
+      // Start auto-slide after a short delay to ensure layout is stable
+      setTimeout(startAutoSlide, 500);
     }
 
     function moveSlider(direction) {
       const cards = document.querySelectorAll('.slider-card');
+      if (cards.length === 0) return;
+
       currentSlide = (currentSlide + direction + cards.length) % cards.length;
 
       const track = document.getElementById('sliderTrack');
+      if (!track) return;
+
       // Responsive card width calculation
       const isMobile = window.innerWidth <= 768;
-      const cardWidth = isMobile ? (180 + 40) : (240 + 40); // width + gap
+      const cardWidth = isMobile ? 220 : 280; // width (180/240) + gap (40)
 
       const offset = -(currentSlide - 2) * cardWidth;
 
@@ -2041,7 +1652,7 @@
       if (autoSlideInterval) clearInterval(autoSlideInterval);
       autoSlideInterval = setInterval(() => {
         moveSlider(1);
-      }, 2500); // Change slide every 4 seconds
+      }, 3000); // Increased to 3s for better UX
     }
 
     function pauseAutoSlide() {
@@ -2051,6 +1662,17 @@
     function resetAutoSlide() {
       pauseAutoSlide();
       startAutoSlide();
+    }
+
+    // Handle window resize to keep slider centered
+    window.addEventListener('resize', () => moveSlider(0));
+
+    // Initialize the slider when the page loads
+    document.addEventListener('DOMContentLoaded', initSlider);
+
+    // Fallback for if DOMContentLoaded already fired
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      initSlider();
     }
   </script>
 </body>
